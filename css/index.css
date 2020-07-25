@@ -6,10 +6,13 @@
 html {
     height: 100%;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
+/*
     padding: 124px 0 0 0;
+*/
     margin: 0;
     font-family: 'Roboto', sans-serif;
     -webkit-transition: 0.2s;
@@ -128,9 +131,19 @@ section.descritivo{
     font-size: 1.2rem;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -55px;
+    visibility: hidden;
+}
+
 section.areas-de-atuacao{
     background-color: #2e7cc8;
     padding: 40px 0;
+}
+section.areas-de-atuacao > a.anchor {
+    top: -80px;
 }
 
 section.areas-de-atuacao > div {
