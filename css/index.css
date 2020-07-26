@@ -175,6 +175,7 @@ section.areas-de-atuacao{
     background-color: #007cc3;
     padding: 40px 0;
 }
+
 section.areas-de-atuacao > a.anchor {
     top: -80px;
 }
@@ -271,6 +272,9 @@ section.produtos article img {
 
 }
 
+section.institucional > a.anchor {
+    top: 60px;
+}
 
 section.institucional{
     text-align: center;
