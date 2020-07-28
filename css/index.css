@@ -10,9 +10,7 @@ html {
 }
 
 body {
-/*
-    padding: 124px 0 0 0;
-*/
+    padding: 129px 0 0 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     -webkit-transition: 0.2s;
@@ -30,10 +28,10 @@ h2 {
     margin: 0 auto 0 auto;
 }
 
-.container > #logo-navbar {
-    -webkit-transition: 0.2s;
-    -webkit-transition: 0.5s;
-    transition: 0.2s;
+#logo-navbar {
+    height: 115px;
+    transition: height 0.4s ease-in-out;
+    margin: 5px 0;
 }
 
 .container > .small-logo {
@@ -60,7 +58,10 @@ header > div {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-    padding: 5px 0;
+}
+
+header nav{
+    
 }
 
 header ul {
@@ -81,7 +82,7 @@ header ul li{
 header ul li a, header ul div a{
     display: block;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 20px 25px 20px;
     color: #007cc3;
 }
 
