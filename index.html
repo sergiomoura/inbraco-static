@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inbraco</title>
+    
+    <!--    icons   -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!--    timeline  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/timeline.css">
 </head>
+
 <body>
 
     <header>
@@ -20,13 +30,13 @@
                     <li><a href="#anchor-areas-de-atuacao">Áreas de Atuação</a></li>
                     <div class="dropdown">
                         <a class="dropbtn" href="#anchor-produtos">Produtos 
-                            <i class="fa fa-caret-down"></i>
+                            <i class="fas fa-angle-down"></i>
                         </a>
                         <div class="dropdown-content">
                             <a href="#">Componentes</a>
                             <a href="#">Maquinas</a>
                         </div>
-                    </div> 
+                    </div>
                     <li><a href="#anchor-institucional">Missão</a></li>
                     <li><a href="#anchor-historia">História</a></li>
                     <li><a href="#anchor-clientes">Clientes</a></li>
@@ -35,7 +45,7 @@
             </nav>
         </div>
     </header>
-    
+
     <section class="banner">
         <div class="container">
             <div>
@@ -54,139 +64,182 @@
             informações necessárias à sua implementação .
         </section>
 
-        <div class="scroll-area">
-            <section class="areas-de-atuacao" >
-                <a class="anchor" id="anchor-areas-de-atuacao"></a>
-                <div class="container">
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-componentes.svg" alt="Componentes">
-                            <h2>Componentes</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-ortese.svg" alt="Central de Fabricação">
-                            <h2>Central de Fabricação</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-clinicas.svg" alt="Clínica">
-                            <h2>Clínica</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-maquinas.svg" alt="Máquinas e Equipamentos">
-                            <h2>Máquinas e Equipamentos</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-cursos.svg" alt="Cursos">
-                            <h2>Cursos</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-conssltoria.svg" alt="Consultoria">
-                            <h2>Consultoria</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
-                        </a>
-                    </article>
-                </div>
+        <section class="areas-de-atuacao">
+            <a class="anchor" id="anchor-areas-de-atuacao"></a>
+            <div class="container">
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-componentes.svg" alt="Componentes">
+                        <h2>Componentes</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-ortese.svg" alt="Central de Fabricação">
+                        <h2>Central de Fabricação</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-clinicas.svg" alt="Clínica">
+                        <h2>Clínica</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-maquinas.svg" alt="Máquinas e Equipamentos">
+                        <h2>Máquinas e Equipamentos</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-cursos.svg" alt="Cursos">
+                        <h2>Cursos</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-conssltoria.svg" alt="Consultoria">
+                        <h2>Consultoria</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, quisquam ducimus!</p>
+                    </a>
+                </article>
+            </div>
 
-            </section>
-            <section class="produtos container" >
-                <a class="anchor" id="anchor-produtos"></a>
-                <h2>Nossos Produtos</h2>
-                <div>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-componentes.svg" alt="Componentes">
-                            <h2>Componentes</h2>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#">
-                            <img src="img/icons/icon-maquinas.svg" alt="Máquinas e Equipamentos">
-                            <h2>Máquinas, Equipamentos e Ferramentas</h2>
-                        </a>
-                    </article>
-                </div>
+        </section>
+        
+        <section class="produtos container">
+            <a class="anchor" id="anchor-produtos"></a>
+            <h2>Nossos Produtos</h2>
+            <div>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-componentes.svg" alt="Componentes">
+                        <h2>Componentes</h2>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="img/icons/icon-maquinas.svg" alt="Máquinas e Equipamentos">
+                        <h2>Máquinas, Equipamentos e Ferramentas</h2>
+                    </a>
+                </article>
+            </div>
 
-            </section>
+        </section>
 
-            <section class="institucional">
-                <a class="anchor" id="anchor-institucional"></a>
-                <div>
-                    <article  class="container">
-                        <h2>Missão</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore voluptatum possimus id voluptates illum distinctio quis dolorum a numquam assumenda tempora laboriosam eaque dignissimos ullam molestias dolores error, quia repellat.</p>
-                    </article>
-                    <article  class="container">
-                        <h2>Visão</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat labore reiciendis nobis aliquam ipsa? Harum perspiciatis suscipit cumque omnis unde alias. Tenetur, iusto cum veritatis doloremque quasi necessitatibus sed perspiciatis!</p>
-                    </article>
-                    <article  class="container">
-                        <h2>Valores</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quod ea eaque suscipit reprehenderit esse distinctio, accusamus dolorem nesciunt veniam beatae quas aperiam, aspernatur doloribus eveniet culpa debitis sapiente optio?</p>
-                    </article>
-                </div>
-            </section>
+        <section class="institucional">
+            <a class="anchor" id="anchor-institucional"></a>
+            <div>
+                <article class="container">
+                    <h2>Missão</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore voluptatum possimus id voluptates illum distinctio quis dolorum a numquam assumenda tempora laboriosam eaque dignissimos ullam molestias dolores error, quia repellat.</p>
+                </article>
+                <article class="container">
+                    <h2>Visão</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat labore reiciendis nobis aliquam ipsa? Harum perspiciatis suscipit cumque omnis unde alias. Tenetur, iusto cum veritatis doloremque quasi necessitatibus sed perspiciatis!</p>
+                </article>
+                <article class="container">
+                    <h2>Valores</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quod ea eaque suscipit reprehenderit esse distinctio, accusamus dolorem nesciunt veniam beatae quas aperiam, aspernatur doloribus eveniet culpa debitis sapiente optio?</p>
+                </article>
+            </div>
+        </section>
 
-            <section class="historia">
-                <a class="anchor" id="anchor-historia"></a>
-                <div class="container">
-                    <h2>Conheça um pouco da nossa história</h2>
-                    <div class="infografico">Infográfico animado vai aqui</div>
-                </div>
-            </section>
-
-            <section class="clientes container">
-                <a class="anchor" id="anchor-clientes"></a>
-                <h2>Clientes</h2>
-                <div>
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                    <img src="" alt="AACD">
-                </div>
-            </section>
-
-            <section class="contato container">
-                <a class="anchor" id="anchor-contato"></a>
-                <h2>Mantenha Contato</h2>
-                <div>
-                    <div>
-                        <a href="mailto:comercial@inbraco.com.br">comercial@inbraco.com.br</a>
-                        <a href="mailto:financeiro@inbraco.com.br">financeiro@inbraco.com.br</a> 
+        <section class="historia">
+            <a class="anchor" id="anchor-historia"></a>
+            <div class="container">
+                <h2>Conheça um pouco da nossa história</h2>
+                <div class="timeline">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url(https://picsum.photos/1920/500?random=1);" data-year="2000">
+                                <div class="swiper-slide-content"><span class="timeline-year">2000</span>
+                                    <h2 class="timeline-title">Your Event Title</h2>
+                                    <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background-image: url(https://picsum.photos/1920/500?random=2);" data-year="2002">
+                                <div class="swiper-slide-content"><span class="timeline-year">2002</span>
+                                    <h4 class="timeline-title">Your Event Title</h4>
+                                    <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background-image: url(https://picsum.photos/1920/500?random=3);" data-year="2003">
+                                <div class="swiper-slide-content"><span class="timeline-year">2003</span>
+                                    <h4 class="timeline-title">Your Event Title</h4>
+                                    <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background-image: url(https://picsum.photos/1920/500?random=4);" data-year="2005">
+                                <div class="swiper-slide-content"><span class="timeline-year">2005</span>
+                                    <h4 class="timeline-title">Your Event Title</h4>
+                                    <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background-image: url(https://picsum.photos/1920/500?random=5);" data-year="2009">
+                                <div class="swiper-slide-content"><span class="timeline-year">2009</span>
+                                    <h4 class="timeline-title">Your Event Title</h4>
+                                    <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background-image: url(https://picsum.photos/1920/500?random=6);" data-year="2012">
+                                <div class="swiper-slide-content"><span class="timeline-year">2012</span>
+                                    <h4 class="timeline-title">Your Event Title</h4>
+                                    <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div>
-                        <a href="tel:+55 11 5555-5555">tel:+55 11 5555-5555</a>
-                        <a href="tel:+55 11 5555-5555">tel:+55 11 5555-5555</a>
-                    </div>
-                    <div>
-                        Av. Francido das Flores. Rua 45 Centro
-                    </div>
                 </div>
-            </section>
-        </div>
-    
+            </div>
+        </section>
+
+        <section class="clientes container">
+            <a class="anchor" id="anchor-clientes"></a>
+            <h2>Clientes</h2>
+            <div>
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+                <img src="" alt="AACD">
+            </div>
+        </section>
+
+        <section class="contato container">
+            <a class="anchor" id="anchor-contato"></a>
+            <h2>Mantenha Contato</h2>
+            <div>
+                <div>
+                    <a href="mailto:comercial@inbraco.com.br">comercial@inbraco.com.br</a>
+                    <a href="mailto:financeiro@inbraco.com.br">financeiro@inbraco.com.br</a>
+                </div>
+                <div>
+                    <a href="tel:+55 11 5555-5555">tel:+55 11 5555-5555</a>
+                    <a href="tel:+55 11 5555-5555">tel:+55 11 5555-5555</a>
+                </div>
+                <div>
+                    Av. Francido das Flores. Rua 45 Centro
+                </div>
+            </div>
+        </section>
+
         <section class="links">
             ...
         </section>
@@ -195,8 +248,10 @@
     <footer>
         &copy; 2020 Inbraco. Todos os direitos reservados.
     </footer>
- 
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
     <script src="js/index.js"></script>
-  
+
 </body>
+
 </html>

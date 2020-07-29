@@ -30,6 +30,7 @@ h2 {
 
 #logo-navbar {
     height: 115px;
+    -webkit-transition: height 0.4s ease-in-out;
     transition: height 0.4s ease-in-out;
     margin: 5px 0;
 }
@@ -176,7 +177,7 @@ section.areas-de-atuacao{
 }
 
 .section.areas-de-atuacao > a.anchor {
-    top: -80px;
+    top: -150px;
 }
 
 section.areas-de-atuacao > div {
@@ -311,7 +312,6 @@ section.institucional > div > article{
     margin-bottom: 60px;
 }
 
-
 section.institucional h2{
     color: #2e7cc8;
     margin: 0;
@@ -323,9 +323,12 @@ section.institucional p {
     padding: 0;
 }
 
+section.historia {
+    height: 900px;
+}
 .infografico{
     width: 100%;
-    height: 600px;
+    height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
