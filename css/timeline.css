@@ -101,7 +101,7 @@
   transition: .4s ease 1.8s;
 }
 .timeline .swiper-pagination {
-  right: 15% !important;
+  right: 10% !important;
   height: 100%;
   display: none;
   -webkit-box-orient: vertical;
@@ -159,7 +159,7 @@
 .timeline .swiper-button-next,
 .timeline .swiper-button-prev {
   background-size: 20px 20px;
-  top: 15%;
+  top: 10%;
   width: 20px;
   height: 20px;
   margin-top: 0;
@@ -217,7 +217,7 @@
   .timeline .swiper-button-prev {
     top: 15%;
     left: auto;
-    right: 15%;
+    right: 12%;
     -webkit-transform: rotate(90deg) translate(0, 10px);
             transform: rotate(90deg) translate(0, 10px);
   }
@@ -228,7 +228,7 @@
   .timeline .swiper-button-next {
     top: auto;
     bottom: 15%;
-    right: 15%;
+    right: 12%;
     -webkit-transform: rotate(90deg) translate(0, 10px);
             transform: rotate(90deg) translate(0, 10px);
   }
