@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbraco</title>
+    
+    <!--    icons   -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!--    timeline  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/timeline.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#">
+                <img src="img/logo.webp" alt="Inbraco" id="logo-navbar">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#anchor-areas-de-atuacao">Áreas de Atuação</a></li>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="#anchor-produtos">Produtos 
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="#">Componentes</a>
+                            <a href="#">Maquinas</a>
+                        </div>
+                    </div>
+                    <li><a href="#anchor-institucional">Missão</a></li>
+                    <li><a href="#anchor-historia">História</a></li>
+                    <li><a href="#anchor-clientes">Clientes</a></li>
+                    <li><a href="#anchor-contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="container produtos">
+
+        <form action="#">
+            <label for="categoria">
+                Categoria:
+                <select name="categoria" id="categoria">
+                    <option value="0">Todos</option>
+                    <option value="1">Máquinas</option>
+                    <option value="2">Componentes</option>
+                </select>
+            </label>
+            <label for="busca">
+                Busca:
+                <input name="busca" id="busca" type="text">
+            </label>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="img/no-image.png" alt="Nome do Produto">
+                </a>
+                <h3>Nome do Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, sint deleniti? Labore error consequatur nam commodi recusandae, iste, omnis quo accusamus possimus, eveniet eaque quis veniam incidunt sed nostrum impedit.</p>
+            </article>
+            <article>
+                <a href="#">
+                    <img src="img/no-image.png" alt="Nome do Produto">
+                </a>
+                <h3>Nome do Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, sint deleniti? Labore error consequatur nam commodi recusandae, iste, omnis quo accusamus possimus, eveniet eaque quis veniam incidunt sed nostrum impedit.</p>
+            </article>
+            <article>
+                <a href="#">
+                    <img src="img/no-image.png" alt="Nome do Produto">
+                </a>
+                <h3>Nome do Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, sint deleniti? Labore error consequatur nam commodi recusandae, iste, omnis quo accusamus possimus, eveniet eaque quis veniam incidunt sed nostrum impedit.</p>
+            </article>
+            <article>
+                <a href="#">
+                    <img src="img/no-image.png" alt="Nome do Produto">
+                </a>
+                <h3>Nome do Produto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, sint deleniti? Labore error consequatur nam commodi recusandae, iste, omnis quo accusamus possimus, eveniet eaque quis veniam incidunt sed nostrum impedit.</p>
+            </article>
+            
+
+        </section>
+     
+    </main>
+
+    <footer>
+        &copy; 2020 Inbraco. Todos os direitos reservados.
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
