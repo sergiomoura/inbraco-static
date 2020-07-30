@@ -12,6 +12,7 @@ textarea {
 input[type=text]:focus,
 textarea:focus {
     border: 2px solid #3bb3c2;
+    padding: 14px 19px;
 }
 
 input[type=submit] {
