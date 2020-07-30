@@ -249,14 +249,19 @@
         <section class="contato container">
             <a class="anchor" id="anchor-contato"></a>
             <h2>Mantenha Contato</h2>
-            <form action="/action_page.php">
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" placeholder="Email"><br>
-                <label for="name">Nome:</label><br>
-                <input type="text" id="name" name="name" placeholder="Nome"><br><br>
-                <label for="message">Message:</label><br>
-                <textarea name="message" rows="10" cols="30" placeholder="Em que podemos ajudar?"></textarea>
-                <input type="submit" value="Enviar">
+            <form>
+                <label for="email">Email:
+                    <input type="text" id="email" name="email">
+                </label>
+                <label for="name">
+                    Nome:
+                    <input type="text" id="name" name="name">
+                </label>
+                <label for="message">
+                    Mensagem:
+                    <textarea name="message" rows="10" cols="30" placeholder="Em que podemos ajudar?"></textarea>
+                </label>
+                <button type="submit">Enviar</button>
             </form>
 
             <div>
