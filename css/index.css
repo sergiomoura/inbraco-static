@@ -244,11 +244,6 @@ section.contato {
 
 input, textarea {
     width: 100%;
-    border: 1px solid #3bb3c2;
-}
-
-input {
-    height: 50px;
 }
 
 section.contato > div {
