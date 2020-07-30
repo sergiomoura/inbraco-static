@@ -362,6 +362,19 @@ section.clientes > div > img {
     background-color: #007cc3;
 }
 
+section.contato {
+    padding: 40px 0;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid #3bb3c2;
+}
+
+input {
+    height: 50px;
+}
+
 section.contato > div {
     background-color: yellow;
     display: -webkit-box;
