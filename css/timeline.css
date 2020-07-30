@@ -215,7 +215,7 @@
     display: flex;
   }
   .timeline .swiper-button-prev {
-    top: 15%;
+    top: 10%;
     left: auto;
     right: 12%;
     -webkit-transform: rotate(90deg) translate(0, 10px);
@@ -227,7 +227,7 @@
   }
   .timeline .swiper-button-next {
     top: auto;
-    bottom: 15%;
+    bottom: 10%;
     right: 12%;
     -webkit-transform: rotate(90deg) translate(0, 10px);
             transform: rotate(90deg) translate(0, 10px);
