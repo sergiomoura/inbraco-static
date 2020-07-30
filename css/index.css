@@ -258,10 +258,8 @@ section.contato > div {
     display: flex;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #2e7cc8;
-    color: white;
-    margin-top: auto;
+button[type=submit] {
+    width: 40%;
+    margin: 15px auto;
+    display: block;
 }

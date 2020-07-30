@@ -15,6 +15,17 @@ textarea {
     outline: none;
 }
 
+select {
+    width: 100%;
+    border: 1px solid #007cc3;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 16px;
+    margin: 8px 0 0 0;
+    outline: none;
+    background-color: #FFF;
+}
+
 input[type=text]:focus,
 textarea:focus {
     border: 2px solid #3bb3c2;
@@ -22,15 +33,12 @@ textarea:focus {
 }
 
 button[type=submit] {
-    width: 40%;
-    margin: 15px auto;
     background-color: #007cc3;
     color: white;
     padding: 15px 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    display: block;
     border: 2px solid rgba(0,0,0,0)
 }
 

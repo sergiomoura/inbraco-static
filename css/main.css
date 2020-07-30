@@ -116,3 +116,12 @@ header .dropdown:hover .dropdown-content {
     display: block;
     z-index: 1;
 }
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #2e7cc8;
+    color: white;
+    margin-top: auto;
+}
