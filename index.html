@@ -18,20 +18,23 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="css/forms.css">
+    
+    
+    
 </head>
 
 <body>
 
     <header>
-        <div class="container">
+        <div class="container" id="navbar">
             <a href="#">
                 <img src="img/logo.webp" alt="Inbraco" id="logo-navbar">
             </a>
             <nav>
                 <ul>
-                    <li><a href="#anchor-areas-de-atuacao">Áreas de Atuação</a></li>
+                    <li><a class="navbar-item" id="areas-de-atuação" href="#anchor-areas-de-atuacao">Áreas de Atuação</a></li>
                     <div class="dropdown">
-                        <a class="dropbtn" href="#anchor-produtos">Produtos
+                        <a class="dropbtn navbar-item" id="produtos" href="#anchor-produtos">Produtos
                             <i class="fas fa-angle-down"></i>
                         </a>
                         <div class="dropdown-content">
@@ -39,10 +42,10 @@
                             <a href="#">Maquinas</a>
                         </div>
                     </div>
-                    <li><a href="#anchor-institucional">Missão</a></li>
-                    <li><a href="#anchor-historia">História</a></li>
-                    <li><a href="#anchor-clientes">Clientes</a></li>
-                    <li><a href="#anchor-contato">Contato</a></li>
+                    <li><a class="navbar-item" id="institucional" href="#anchor-institucional">Missão</a></li>
+                    <li><a class="navbar-item" id="historia" href="#anchor-historia">História</a></li>
+                    <li><a class="navbar-item" id="clientes" href="#anchor-clientes">Clientes</a></li>
+                    <li><a class="navbar-item" id="contato" href="#anchor-contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -66,7 +69,7 @@
             informações necessárias à sua implementação .
         </section>
 
-        <section class="areas-de-atuacao">
+        <section class="areas-de-atuacao" id="areas-de-atuacao">
             <div class="container">
                 <a class="anchor" id="anchor-areas-de-atuacao"></a>
                 <h2>Conheça as nossas áreas de atuação</h2>
@@ -118,7 +121,7 @@
             </div>
         </section>
 
-        <section class="produtos container">
+        <section class="produtos container" id="produtos">
             <a class="anchor" id="anchor-produtos"></a>
             <h2>Nossos Produtos</h2>
             <div>
@@ -138,7 +141,7 @@
 
         </section>
 
-        <section class="institucional">
+        <section class="institucional" id="institucional">
             <a class="anchor" id="anchor-institucional"></a>
             <div>
                 <article class="container">
@@ -156,7 +159,7 @@
             </div>
         </section>
 
-        <section class="historia">
+        <section class="historia" id="historia">
             <a class="anchor" id="anchor-historia"></a>
             <div class="container">
                 <h2>Conheça um pouco da nossa história</h2>
@@ -226,7 +229,7 @@
             </div>
         </section>
 
-        <section class="clientes container">
+        <section class="clientes container" id="clientes">
             <a class="anchor" id="anchor-clientes"></a>
             <h2>Clientes</h2>
             <div>
@@ -245,7 +248,7 @@
             </div>
         </section>
 
-        <section class="contato container">
+        <section class="contato container" id="contato">
             <a class="anchor" id="anchor-contato"></a>
             <h2>Mantenha Contato</h2>
             <form>
@@ -280,9 +283,11 @@
             </p>
         </div>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
     <script src="js/index.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/header.js"></script>
 
 </body>
 
