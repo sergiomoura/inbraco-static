@@ -12,9 +12,13 @@ section.section-area-de-atuacao {
     color: white;
 }
 
+section.section-area-de-atuacao > a.anchor {
+    top: -200px;
+}
+
 section.section-area-de-atuacao .container {
     display: grid;
-    grid-template-columns: 60px 2fr 3fr;
+    grid-template-columns: 80px 2fr 3fr;
     min-height: 300px;
     position: relative;
 }
@@ -28,7 +32,7 @@ section.section-area-de-atuacao .name-section > h2 {
     color: white;
     font-size: 24px;
     line-height: 30px;
-    width: 300px;
+    width: 250px;
     position: absolute;
     bottom: 15px;
     left: 15px;
