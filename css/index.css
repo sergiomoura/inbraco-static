@@ -40,13 +40,6 @@ section.descritivo{
     font-size: 1.2rem;
 }
 
-a.anchor {
-    display: block;
-    position: relative;
-    top: -55px;
-    visibility: hidden;
-}
-
 section.areas-de-atuacao{
     background-color: #007cc3;
     padding: 40px 0;

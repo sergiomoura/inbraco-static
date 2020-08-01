@@ -30,6 +30,13 @@ h2 {
     color: #007cc3;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+
 .container {
     width: 960px;
     margin: 0 auto 0 auto;
