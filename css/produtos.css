@@ -1,27 +1,51 @@
-form {
+.produtos {
     display: flex;
-    align-items: center;
-    margin: 20px 0;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-form label {
-    margin-right: 10px;
+form {
+    flex: 0 0 240px;
+    margin-right: 20px;
 }
 
-form label:nth-child(1){
-    display: block;
-    flex: 0 0 200px;
+form label{
+    margin-bottom: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
-form label:nth-child(2){
-    display: block;
-    flex-grow: 1;
+form input[type=checkbox]{
+    margin-right: 5px;
+    position: relative;
+    top: 1px;
 }
 
-form button{
-    display: block;
-    flex: 0 0 100px;
-    text-align: left;
+form input[type=text], form select{ 
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: 1px solid #666;
+}
+
+form input[type=text]:focus, form select:focus{ 
+    border: 1px solid #007cc3;
+    padding: 10px 10px;
+}
+
+form button[type=submit]{
+    padding: 10px 10px;
+    border-radius: 6px;
+    width: 50%;
+    margin-top:20px
+}
+
+form > div{
+    margin-top: 20px;
+}
+
+form > div > span{
+    font-weight: bold;
 }
 
 section {
