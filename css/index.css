@@ -264,28 +264,3 @@ button[type=submit] {
     margin: 15px auto;
     display: block;
 }
-
-footer {
-    padding: 8px;
-    color: #007cc3;
-}
-
-footer > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 40px;
-    column-gap: 40px;
-    row-gap: 40px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-footer > div .contact {
-    text-align: left;
-    line-height: 30px
-}
-
-footer > div .rights {
-    text-align: right;
-}
