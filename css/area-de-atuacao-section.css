@@ -1,0 +1,49 @@
+section.descritivo{
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+section.section-area-de-atuacao {
+    background-color: #007cc3;
+    margin: 20px 0;
+    padding: 20px;
+    color: white;
+}
+
+section.section-area-de-atuacao .container {
+    display: grid;
+    grid-template-columns: 60px 2fr 3fr;
+    min-height: 300px;
+}
+
+section.section-area-de-atuacao .name-section {
+    width: 100%;
+    position: relative;
+    background-color: aqua;
+}
+
+section.section-area-de-atuacao .name-section > h2 {
+    color: black;
+    background-color:blueviolet;
+    
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    position: absolute;
+    top: 0%;
+    width: auto;
+    height: auto;
+    
+    
+/*    font-size: 24px;
+    line-height: 30px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-left: -30px;
+    
+    
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;*/
+}
