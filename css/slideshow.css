@@ -1,0 +1,139 @@
+div.destaques-slideshow .mySlides {
+    display: none
+}
+
+div.destaques-slideshow > img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+div.destaques-slideshow .slideshow-container {
+/*    max-width: 1000px;*/
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+div.destaques-slideshow .prev,
+div.destaques-slideshow .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+div.destaques-slideshow .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+div.destaques-slideshow .prev:hover,
+div.destaques-slideshow .next:hover {
+    color: rgba(59, 179, 194, 0.9);
+}
+
+/* Caption div */
+div.destaques-slideshow .text {
+    color: #f2f2f2;
+    font-size: 26px;
+    padding: 12px 12px;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+/* Caption text */
+div.destaques-slideshow .text > p{
+    margin: 10px 20px;
+}
+
+/* Caption button */
+div.destaques-slideshow .text > button {
+    color: #f2f2f2;
+    background: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 20px;
+    border: 1px solid white;
+}
+
+div.destaques-slideshow .text > button:hover {
+    color: #3bb3c2;
+    border: 2px solid #3bb3c2;
+    padding: 9px 14px;
+}
+
+/* The dots/bullets/indicators */
+div.destaques-slideshow .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(59,179,194,0.4);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+}
+
+div.destaques-slideshow .active,
+div.destaques-slideshow .dot:hover {
+    background-color: rgba(59,179,194,1);
+}
+
+/* Fading animation */
+div.destaques-slideshow .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    div.destaques-slideshow .prev,
+    div.destaques-slideshow .next,
+    div.destaques-slideshow .text {
+        font-size: 11px
+    }
+}
