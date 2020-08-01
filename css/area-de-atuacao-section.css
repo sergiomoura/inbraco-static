@@ -5,6 +5,18 @@ section.descritivo {
     font-size: 1.2rem;
 }
 
+section.banner-area-de-atuacao {
+    width: 100%;
+    height: 750px;
+}
+
+section.banner-area-de-atuacao img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 section.section-area-de-atuacao {
     background-color: #007cc3;
     margin: 80px 0;
