@@ -27,7 +27,7 @@ body {
 }
 
 h2 {
-    color:#007cc3;
+    color: #007cc3;
 }
 
 .container {
@@ -44,8 +44,8 @@ h2 {
 
 header {
     background-color: #FFF;
-    -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
-    box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     width: 100%;
@@ -71,28 +71,31 @@ header ul {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-/*    top:-7px;*/
+    /*    top:-7px;*/
 }
 
-header ul li{
+header ul li {
     list-style: none;
     display: block;
 }
 
-header ul li a, header ul div a{
+header ul li a,
+header ul div a {
     display: block;
     text-decoration: none;
     padding: 10px 20px 25px 20px;
     color: #007cc3;
 }
 
-header a:hover, header .dropdown:hover .dropbtn, header .dropdown-content a:hover {
+header a:hover,
+header .dropdown:hover .dropbtn,
+header .dropdown-content a:hover {
     color: #3bb3c2;
 }
 
 header .dropdown {
-  float: left;
-  overflow: hidden;
+    float: left;
+    overflow: hidden;
 }
 
 /* Dropdown content (hidden by default) */
@@ -101,8 +104,8 @@ header .dropdown-content {
     position: absolute;
     min-width: 160px;
     background-color: #FFF;
-    -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
-    box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
     z-index: 0;
 }
 
@@ -122,6 +125,43 @@ header .dropdown:hover .dropdown-content {
     z-index: 1;
 }
 
+header .navbar-area-de-atuacao {
+    background-color: #007cc3;
+    color: white;
+}
+
+header .navbar-area-de-atuacao .container {
+    /*    padding-left: 300px;*/
+}
+
+header .navbar-area-de-atuacao nav {
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+header .navbar-area-de-atuacao ul li a,
+header .navbar-area-de-atuacao ul div a {
+    color: white;
+}
+
+header .navbar-area-de-atuacao a:hover,
+header .navbar-area-de-atuacao .dropdown:hover .dropbtn,
+header .navbar-area-de-atuacao .dropdown-content a:hover {
+    color: #3bb3c2;
+}
+
+/* Dropdown content (hidden by default) */
+header .navbar-area-de-atuacao .dropdown-content {
+    background-color: #007cc3;
+}
 
 footer {
     text-align: center;
@@ -129,8 +169,6 @@ footer {
     background-color: #007cc3;
     color: white;
     margin-top: auto;
-}
-footer {
 }
 
 footer > div {
