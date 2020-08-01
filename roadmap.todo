@@ -1,27 +1,15 @@
 ☐ Página de produtos
 ☐ colocar links para produtos (pag maquinas):
     - slides top
-☐ centralizar nome da sessão em area de atuação
+    
 ☐ Fazer depoimentos em areas de atuaçao
+☐ concertar problema no js do slideshow (se vc clica em mudar de slide ele fica subindo a pagina)
+☐ curso parte proximo curso à ser oferecido????
 
-Fazer página genérica para área de atuação:
-    ☐ componentes
-        - articulacao de quadril
-        - articulacao de joelho
-        - articulacao de tornozelo
-    ☐ Cursos
-        - tematica curso
-    ☐ Consultaria
-        - contato expecifico
-    ☐ Clínica
-        - banner e descricao 
-        - galeria
-    ☐ Central de Fabricação
-        - banner e descricao 
-        - galeria
-
+☐ Mudar cor do link em função da sessao de atuação????
 ☐ Mudar cor do link em função do bloco atual
 (http://jsfiddle.net/mohamedyousef1980/nk3c1dxj/4/, https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll, https://stackoverflow.com/questions/33749223/javascript-scroll-current-views-element-id)
-☐ backend formulario contato
+☐ backend formulario contato homepage
+☐ backend formulario contato consultoria
 
 

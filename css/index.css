@@ -2,6 +2,7 @@
 section.banner{
     height: 600px;
     position: relative;
+    color: black;
 }
 
 section.banner::after {

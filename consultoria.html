@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/maquinas.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/consultoria.css">
     <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="css/area-de-atuacao-section.css">
 
@@ -49,15 +50,7 @@
             <div class="container">
             <nav>
                 <ul>
-                    <div class="dropdown">
-                        <a class="dropbtn navbar-item" id="maquinas" href="#">Maquinas
-                            <i class="fas fa-angle-down"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="#">Componentes</a>
-                            <a href="#">Maquinas</a>
-                        </div>
-                    </div>
+                    <li><a class="navbar-item" id="maquinas" href="/maquinas.html">Máquinas</a></li>
                     <li><a class="navbar-item" id="componentes" href="/componentes.html">Componentes</a></li>
                     <li><a class="navbar-item" id="central-de-fabricacao" href="/central-de-fabricacao.html">Central de Fabricação</a></li>
                     <li><a class="navbar-item" id="clinica" href="/clinica.html">Clínica</a></li>
@@ -69,63 +62,10 @@
         </div>
     </header>
 
-    <section class="destaques-slides ">
-        <div class="destaques-slideshow">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="img/banner2.jpg" style="width:100%">
-                    <div class="text">
-                        <div>
-                            MAQUINA 1
-                        </div>
-                        <button type="button">Compre já</button>
-                    </div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="img/banner2.jpg" style="width:100%">
-                    <div class="text">
-                        <div>
-                            MAQUINA 2
-                        </div>
-                        <button type="button">Compre já</button>
-                    </div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="img/banner2.jpg" style="width:100%">
-                    <div class="text">
-                        <div>
-                            MAQUINA 3
-                        </div>
-                        <button type="button">Compre já</button>
-                    </div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="img/banner2.jpg" style="width:100%">
-                    <div class="text">
-                        <div>
-                            MAQUINA 4
-                        </div>
-                        <button type="button">Compre já</button>
-                    </div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-            <br>
-
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
-        </div>
+    <section class="banner-area-de-atuacao">
+        <img src="img/banner2.jpg" style="width:100%">
     </section>
+    
 
     <main>
         <section class="descritivo container">
@@ -141,216 +81,24 @@
             </p>
         </section>
 
-
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
+                <section class="contato container" id="contato">
+            <a class="anchor" id="anchor-contato"></a>
+            <h2>Solicite nossa consultoria</h2>
+            <form>
+                <label for="email">Email:
+                    <input type="text" id="email" name="email">
+                </label>
+                <label for="name">
+                    Nome:
+                    <input type="text" id="name" name="name">
+                </label>
+                <label for="message">
+                    Mensagem:
+                    <textarea name="message" rows="10" cols="30" placeholder="Em que podemos ajudar?"></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="section-area-de-atuacao">
-            <div class="container">
-                <div class="name-section">
-                    <h2 >
-                        Nome da Sessão
-                    </h2>
-                </div>
-                <div class="description-section">
-                    Descritivo da sessão
-                    Pellentesque ullamcorper ultricies rutrum. Ut facilisis mollis ipsum, non eleifend neque mattis at. In eleifend id sapien a sagittis. Aliquam efficitur enim cursus sagittis luctus.
-                </div>
-                <div class="image-section">
-                    <img src="img/banner2.jpg">
-                </div>
-            </div>
-        </section>
-
 
     </main>
 
@@ -367,7 +115,6 @@
     </footer>
 
     <script src="js/header.js"></script>
-    <script type="text/javascript" src="js/slideshow.js"></script>
     <script type="text/javascript" src="js/maquinas.js"></script>
 
 </body>
