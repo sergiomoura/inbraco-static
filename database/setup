@@ -1,0 +1,18 @@
+<?php 
+
+    // Importando constantes d conexão com o banco de dados
+    require_once(__DIR__."/.env.php");
+    
+    // Criando comando para criar BD a partir do script
+    $command = 'mysql'
+        . ' --host=' . DB_HOST
+        . ' --user=' . DB_USER
+        . ' --password=' . DB_PASS
+        . ' --database=' . DB_NAME
+        . ' --execute="SOURCE '.__DIR__.'/'.DB_FILE.'"';
+    
+    $output = shell_exec($command);
+    echo($output);
+
+    
+?>
