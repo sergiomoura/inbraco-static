@@ -16,6 +16,18 @@ CREATE SCHEMA IF NOT EXISTS `inbraco` DEFAULT CHARACTER SET utf8 ;
 USE `inbraco` ;
 
 -- -----------------------------------------------------
+-- Table `inbraco`.`categorias`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `inbraco`.`categorias` ;
+
+CREATE TABLE IF NOT EXISTS `inbraco`.`categorias` (
+  `id` INT NOT NULL,
+  `nome` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `inbraco`.`produtos`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `inbraco`.`produtos` ;
@@ -24,7 +36,14 @@ CREATE TABLE IF NOT EXISTS `inbraco`.`produtos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` TEXT NULL,
-  PRIMARY KEY (`id`))
+  `id_categoria` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_produtos_categorias1_idx` (`id_categoria` ASC),
+  CONSTRAINT `fk_produtos_categorias1`
+    FOREIGN KEY (`id_categoria`)
+    REFERENCES `inbraco`.`categorias` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -104,6 +123,25 @@ CREATE TABLE IF NOT EXISTS `inbraco`.`rellacionados` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_rellacionados_produtos2`
     FOREIGN KEY (`id_produto2`)
+    REFERENCES `inbraco`.`produtos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `inbraco`.`tags`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `inbraco`.`tags` ;
+
+CREATE TABLE IF NOT EXISTS `inbraco`.`tags` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `produtos_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_table1_produtos1_idx` (`produtos_id` ASC),
+  CONSTRAINT `fk_table1_produtos1`
+    FOREIGN KEY (`produtos_id`)
     REFERENCES `inbraco`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
