@@ -234,6 +234,10 @@ section.clientes > div > img {
     background-color: white;
 }
 
+section.contato label {
+    color:  #007cc3;
+}
+
 section.contato {
     padding: 40px 0;
 }
