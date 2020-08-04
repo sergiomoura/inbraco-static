@@ -52,4 +52,27 @@ function changeColorActive (active){
     navItens[active].style.color = "#3bb3c2";
 }
 
+function showDropdonw (liDropdown){
+    liDropdown.getElementsByClassName("dropdown-content")[0].style.display = "block";
+}
+
+if ( document.getElementById("navbar-area-de-atuacao") !== null){
+    var liDropdown = document.getElementById("navbar-area-de-atuacao").getElementsByClassName("dropdown active")[0];
+    console.log
+    liDropdown.getElementsByClassName("dropdown-content")[0].style.display = "none";
+    liDropdown.onclick = function(){showDropdonw(liDropdown)};
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        console.log(event.target)
+      if (event.target !== liDropdown.getElementsByClassName("dropbtn navbar-item")[0]) {
+        console.log("if")
+        liDropdown.getElementsByClassName("dropdown-content")[0].style.display = "none"
+      }
+    }
+}
+
+
+
+
 window.addEventListener('scroll', onWindowScroll);
