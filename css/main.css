@@ -115,7 +115,7 @@ header .dropdown-content {
     -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
     z-index: 0;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 8px 8px;
 }
 
 /* Links inside the dropdown */
@@ -169,22 +169,29 @@ header .navbar-area-de-atuacao .dropdown-content a:hover {
 
 /* Dropdown content (hidden by default) */
 header .navbar-area-de-atuacao .dropdown-content {
-    min-width: 200px;
-    left: -15px;
+    min-width: 250px;
+/*    left: -15px;*/
 }
 
-header .navbar-area-de-atuacao ul a {
+header .navbar-area-de-atuacao ul li a, header .navbar-area-de-atuacao ul a.navbar-item {
     padding: 15px 20px;
 }
 
-header .navbar-area-de-atuacao .active {
-    background-color: white;
-    border-radius: 15px 15px 0px 0px;
-		margin: 0 15px;
+header .navbar-area-de-atuacao .fas {
+    color: transparent;
+}
+
+header .navbar-area-de-atuacao ul > div {
+    border-radius: 8px 8px 0px 0px;
     position: relative;
     overflow: visible;
 }
 
+header .navbar-area-de-atuacao .active {
+    background-color: white;
+}
+
+/* curvinhas inferiores para abas no navbar
 header .navbar-area-de-atuacao .active:before,
 header .navbar-area-de-atuacao .active:after {
     content: "";
@@ -218,8 +225,10 @@ header .navbar-area-de-atuacao .active:before {
     -webkit-box-shadow: 10px 0 0 0 #fff;
     box-shadow: 10px 0 0 0 #fff;
 }
+*/
 
-header .navbar-area-de-atuacao .active a {
+header .navbar-area-de-atuacao .active a,
+header .navbar-area-de-atuacao .active .fas {
     color: #007cc3;
 }
 
