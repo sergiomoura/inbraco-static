@@ -168,26 +168,59 @@ section.institucional > a.anchor {
 
 section.institucional{
     text-align: center;
-    background-image: url(../img/fence.jpg);
-    border: 1px solid rgba(0,0,0,0);
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: #007cc3;
+    color: white;
+        padding: 60px 0;
+/*    background-image: url(../img/fence.jpg);*/
+/*    border: 1px solid rgba(0,0,0,0);*/
+/*    background-attachment: fixed;*/
+/*    background-size: cover;*/
 }
 
 section.institucional > div {
-    background-color: rgba(255,255,255,0.9);
-    padding: 60px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+/*    background-color: rgba(255,255,255,0.9);*/
+
+/*
     margin: 100px 0;
     border: 1px solid rgba(0,0,0,0);
+*/
+}
+section.institucional > div > div {
+    margin: auto;
+    width: 30%;
+    height: 100%;
+    background-image: url(/img/o.svg);
+    background-size: 100% 100%;
 }
 
-section.institucional > div > article{
+section.institucional > div > div.instit-valores {
+    width: 35%;
+}
 
-    margin-bottom: 60px;
+section.institucional > div > div > article{
+    padding: 20px 35px 55px 40px;
+/*    width: 100%;*/
+    margin-bottom: 30px;
+}
+
+section.institucional > div > div > article{
+    padding: 20px 35px 55px 40px;
+/*    width: 100%;*/
+    margin-bottom: 30px;
+}
+
+section.institucional ol {
+    text-align: left;
+    padding-left: 30px;
+    margin: 0;
 }
 
 section.institucional h2{
-    color: #2e7cc8;
+    color: white;
     margin: 0;
     padding: 0;
 }
