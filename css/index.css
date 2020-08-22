@@ -24,14 +24,21 @@ section.banner > div {
    font-family: 'Oswald', sans-serif;
    position: relative;
    text-align: right;
-   height: 100%;
+   height: 80%;
    padding-right: 20px;
+   vertical-align: middle;
 }
 
 section.banner > div > div{
-    width: 50%;
+    width: 70%;
+    margin-top: 80px;
+    vertical-align: middle;
     position: absolute;
     right: 20px;
+}
+
+section.banner > div > div > p{
+    margin: 0;
 }
 
 section.descritivo{
@@ -193,7 +200,7 @@ section.institucional > div > div {
     margin: auto;
     width: 29%;
     height: 100%;
-    background-image: url(/img/o.png);
+    background-image: url(../img/o.png);
     background-size: 100% 100%;
 }
 
