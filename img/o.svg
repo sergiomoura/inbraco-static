@@ -12,7 +12,10 @@
    height="800"
    id="svg34"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="o.svg">
+   sodipodi:docname="o.svg"
+   inkscape:export-filename="/media/lais/Documents/Dimas/Site/inbraco-static/img/o.svg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata64">
     <rdf:RDF>
@@ -21,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,7 +44,7 @@
      id="namedview60"
      showgrid="false"
      inkscape:zoom="0.5095939"
-     inkscape:cx="696.52702"
+     inkscape:cx="182.39214"
      inkscape:cy="377.47214"
      inkscape:window-x="70"
      inkscape:window-y="33"
