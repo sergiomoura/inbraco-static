@@ -5,6 +5,14 @@ section.descritivo {
     font-size: 1.2rem;
 }
 
+section.descritivo a {
+    color: #007cc3;
+}
+
+section.descritivo a:hover {
+    color: #3bb3c2;
+}
+
 section.banner-area-de-atuacao {
     width: 100%;
     height: 600px;
