@@ -1,0 +1,4 @@
+div.destaques-slideshow .mySlides > img {
+    -o-object-position: bottom;
+    object-position: bottom;
+}
