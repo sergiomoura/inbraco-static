@@ -60,8 +60,9 @@ section.galery .modal {
 section.galery .modal-content {
     margin: auto;
     display: block;
-    width: 70%;
-    max-width: 700px;
+/*    width: 70%;*/
+    max-width: 100%;
+    max-height: 70%;
 }
 
 /* Caption of Modal Image */
