@@ -1,54 +1,47 @@
 <?php 
 
     require_once(__DIR__.'/../lib/DB.php');
+    require_once(__DIR__.'/seeds.php');
+    
 
     // Criando conexão com banco de dados
     $db = new DB();
 
-    $categorias = [
-        [
-            'id' => 1,
-            'nome' => 'Sala de Máquinas'
-        ],
-        [
-            'id' => 2,
-            'nome' => 'Sala de Gesso'
-        ]
-    ];
-
-    // Definindo array de produtos
-    $produtos = [
-        [
-            'id' => 1,
-            'nome' => 'Produto 1',
-            'descricao' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum fermentum lobortis. Cras pharetra orci ac risus vehicula blandit. Phasellus aliquet eleifend accumsan. Curabitur lobortis pulvinar risus vel gravida. Fusce luctus id dolor pulvinar suscipit. Praesent arcu justo, dapibus blandit nisl in, vehicula consectetur odio. Proin lacinia tortor sem, vitae varius augue congue et. Nulla a aliquam arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor nibh non turpis condimentum aliquam. In eu felis scelerisque, laoreet magna non, vestibulum leo. Integer auctor nibh in magna fermentum lobortis. In leo sem, luctus at hendrerit vulputate, suscipit a nunc. Cras malesuada, mauris id convallis bibendum, ligula sem vulputate ipsum, quis semper magna turpis nec nibh.',
-            'id_categoria' => 1
-        ],[
-            'id' => 2,
-            'nome' => 'Produto 2',
-            'descricao' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum fermentum lobortis. Cras pharetra orci ac risus vehicula blandit. Phasellus aliquet eleifend accumsan. Curabitur lobortis pulvinar risus vel gravida. Fusce luctus id dolor pulvinar suscipit. Praesent arcu justo, dapibus blandit nisl in, vehicula consectetur odio. Proin lacinia tortor sem, vitae varius augue congue et. Nulla a aliquam arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor nibh non turpis condimentum aliquam. In eu felis scelerisque, laoreet magna non, vestibulum leo. Integer auctor nibh in magna fermentum lobortis. In leo sem, luctus at hendrerit vulputate, suscipit a nunc. Cras malesuada, mauris id convallis bibendum, ligula sem vulputate ipsum, quis semper magna turpis nec nibh.',
-            'id_categoria' => 1,
-        ],[
-            'id' => 3,
-            'nome' => 'Produto 3',
-            'descricao' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum fermentum lobortis. Cras pharetra orci ac risus vehicula blandit. Phasellus aliquet eleifend accumsan. Curabitur lobortis pulvinar risus vel gravida. Fusce luctus id dolor pulvinar suscipit. Praesent arcu justo, dapibus blandit nisl in, vehicula consectetur odio. Proin lacinia tortor sem, vitae varius augue congue et. Nulla a aliquam arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor nibh non turpis condimentum aliquam. In eu felis scelerisque, laoreet magna non, vestibulum leo. Integer auctor nibh in magna fermentum lobortis. In leo sem, luctus at hendrerit vulputate, suscipit a nunc. Cras malesuada, mauris id convallis bibendum, ligula sem vulputate ipsum, quis semper magna turpis nec nibh.',
-            'id_categoria' => 2,
-        ],[
-            'id' => 4,
-            'nome' => 'Produto 4',
-            'descricao' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum fermentum lobortis. Cras pharetra orci ac risus vehicula blandit. Phasellus aliquet eleifend accumsan. Curabitur lobortis pulvinar risus vel gravida. Fusce luctus id dolor pulvinar suscipit. Praesent arcu justo, dapibus blandit nisl in, vehicula consectetur odio. Proin lacinia tortor sem, vitae varius augue congue et. Nulla a aliquam arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor nibh non turpis condimentum aliquam. In eu felis scelerisque, laoreet magna non, vestibulum leo. Integer auctor nibh in magna fermentum lobortis. In leo sem, luctus at hendrerit vulputate, suscipit a nunc. Cras malesuada, mauris id convallis bibendum, ligula sem vulputate ipsum, quis semper magna turpis nec nibh.',
-            'id_categoria' => 2,
-        ],[
-            'id' => 5,
-            'nome' => 'Produto 5',
-            'descricao' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum fermentum lobortis. Cras pharetra orci ac risus vehicula blandit. Phasellus aliquet eleifend accumsan. Curabitur lobortis pulvinar risus vel gravida. Fusce luctus id dolor pulvinar suscipit. Praesent arcu justo, dapibus blandit nisl in, vehicula consectetur odio. Proin lacinia tortor sem, vitae varius augue congue et. Nulla a aliquam arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor nibh non turpis condimentum aliquam. In eu felis scelerisque, laoreet magna non, vestibulum leo. Integer auctor nibh in magna fermentum lobortis. In leo sem, luctus at hendrerit vulputate, suscipit a nunc. Cras malesuada, mauris id convallis bibendum, ligula sem vulputate ipsum, quis semper magna turpis nec nibh.',
-            'id_categoria' => 2,
-        ],
-    ];
+    // Inserindo categorias
+    $sql = "INSERT INTO categorias (id, nome) VALUES (:id, :nome);";
+    $stmt = $db->prepare($sql);
+    foreach ($categorias as $c) {
+        $stmt->execute($c);
+    }
 
     // Inserindo produtos
-    $sql = "INSERT INTO produtos (id, nome, descricao) VALUES (:id, :nome, :descricao);";
+    $sql = "INSERT INTO produtos (id, nome, descricao, id_categoria) VALUES (:id, :nome, :descricao, :id_categoria);";
     $stmt = $db->prepare($sql);
+    foreach ($produtos as $p) {
+        $stmt->execute($p);
+    }
 
-$sth->execute();
+    // Inserindo tags
+    $sql = "INSERT INTO tags (id, nome, id_produto) VALUES (:id, :nome, :id_produto)";
+    $stmt = $db->prepare($sql);
+    foreach ($tags as $t) {
+        $stmt->execute($t);
+    }
+
+    // Inserindo imagens
+    $sql = "INSERT INTO imagens (id, caminho, id_produto) VALUES (:id, :caminho, :id_produto)";
+    $stmt = $db->prepare($sql);
+    foreach ($imagens as $i) {
+        $stmt->execute($i);
+    }
+
+    // Inserindo produtos relacionados
+    $sql = "INSERT INTO relacionados (id_produto1, id_produto2) VALUES (:id_produto1, :id_produto2)";
+    $stmt = $db->prepare($sql);
+    foreach ($relacionados as $r) {
+        $stmt->execute($r);
+    }
+
+    // Inserindo atributos
+
 ?>
