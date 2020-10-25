@@ -21,8 +21,8 @@ USE `inbraco` ;
 DROP TABLE IF EXISTS `inbraco`.`categorias` ;
 
 CREATE TABLE IF NOT EXISTS `inbraco`.`categorias` (
-  `id` INT NOT NULL,
-  `nome` VARCHAR(45) NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo` enum('m','c') NULL default ('m'),
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -105,23 +105,23 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `inbraco`.`rellacionados`
+-- Table `inbraco`.`relacionados`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `inbraco`.`rellacionados` ;
+DROP TABLE IF EXISTS `inbraco`.`relacionados` ;
 
-CREATE TABLE IF NOT EXISTS `inbraco`.`rellacionados` (
-  `idrellacionados` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `inbraco`.`relacionados` (
+  `id` INT NOT NULL,
   `id_produto1` INT NOT NULL,
   `id_produto2` INT NOT NULL,
-  PRIMARY KEY (`idrellacionados`),
-  INDEX `fk_rellacionados_produtos1_idx` (`id_produto1` ASC),
-  INDEX `fk_rellacionados_produtos2_idx` (`id_produto2` ASC),
-  CONSTRAINT `fk_rellacionados_produtos1`
+  PRIMARY KEY (`id`),
+  INDEX `fk_relacionados_produtos1_idx` (`id_produto1` ASC),
+  INDEX `fk_relacionados_produtos2_idx` (`id_produto2` ASC),
+  CONSTRAINT `fk_relacionados_produtos1`
     FOREIGN KEY (`id_produto1`)
     REFERENCES `inbraco`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_rellacionados_produtos2`
+  CONSTRAINT `fk_relacionados_produtos2`
     FOREIGN KEY (`id_produto2`)
     REFERENCES `inbraco`.`produtos` (`id`)
     ON DELETE NO ACTION
