@@ -5,9 +5,17 @@ section.descritivo {
     font-size: 1.2rem;
 }
 
+section.descritivo a {
+    color: #007cc3;
+}
+
+section.descritivo a:hover {
+    color: #3bb3c2;
+}
+
 section.banner-area-de-atuacao {
     width: 100%;
-    height: 750px;
+    height: 500px;
 }
 
 section.banner-area-de-atuacao img {
@@ -19,7 +27,7 @@ section.banner-area-de-atuacao img {
 
 section.section-area-de-atuacao {
     background-color: #007cc3;
-    margin: 80px 0;
+    margin-bottom: 80px;
     padding: 20px;
     color: white;
 }

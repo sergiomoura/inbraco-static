@@ -1,9 +1,15 @@
 div.destaques-slideshow .mySlides {
     display: none;
+    width: 100%;
+    height: 500px;
 }
 
-div.destaques-slideshow > img {
-    vertical-align: middle;
+div.destaques-slideshow .mySlides > img {
+/*    vertical-align: middle;*/
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 /* Slideshow container */
@@ -103,9 +109,9 @@ div.destaques-slideshow .dot:hover {
 /* Fading animation */
 div.destaques-slideshow .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2.5s;
+    -webkit-animation-duration: 0s;
     animation-name: fade;
-    animation-duration: 2.5s;
+    animation-duration: 0s;
 }
 
 @-webkit-keyframes fade {
