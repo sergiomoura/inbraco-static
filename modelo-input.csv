@@ -1,0 +1,4 @@
+id;nome;id_categoria;relacionados;tags;altura (cm);largura (cm);comprimento (cm);peso (kg);tensão (V);potência (kW);potência (cv)
+1;Cacete Armado;2;"2,3";"tag1, tag2, tag3, tag4";50;20;30;1;220;;10
+2;Produto Teste Lorem;3;1;"tag1, tag3";;;;;;;
+3;Fresa MFP;2;2;tag5;;;;10;;20;

@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `inbraco`.`categorias` ;
 
 CREATE TABLE IF NOT EXISTS `inbraco`.`categorias` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `tipo` enum('m','c') NULL default ('m'),
+  `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -33,7 +33,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `inbraco`.`produtos` ;
 
 CREATE TABLE IF NOT EXISTS `inbraco`.`produtos` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` TEXT NULL,
   `id_categoria` INT NOT NULL,
@@ -53,8 +53,9 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `inbraco`.`atributos` ;
 
 CREATE TABLE IF NOT EXISTS `inbraco`.`atributos` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
+  `unidade` VARCHAR(45),
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -65,23 +66,22 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `inbraco`.`valores_de_atributos` ;
 
 CREATE TABLE IF NOT EXISTS `inbraco`.`valores_de_atributos` (
-  `id` INT NOT NULL,
   `valor` VARCHAR(45) NULL,
   `id_produto` INT NOT NULL,
   `id_atributo` INT NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id_produto`, `id_atributo`),
   INDEX `fk_valores_de_atributos_produtos_idx` (`id_produto` ASC),
   INDEX `fk_valores_de_atributos_atributos1_idx` (`id_atributo` ASC),
   CONSTRAINT `fk_valores_de_atributos_produtos`
     FOREIGN KEY (`id_produto`)
     REFERENCES `inbraco`.`produtos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_valores_de_atributos_atributos1`
     FOREIGN KEY (`id_atributo`)
     REFERENCES `inbraco`.`atributos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -143,8 +143,8 @@ CREATE TABLE IF NOT EXISTS `inbraco`.`tags` (
   CONSTRAINT `fk_table1_produtos1`
     FOREIGN KEY (`produtos_id`)
     REFERENCES `inbraco`.`produtos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
