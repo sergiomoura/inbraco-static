@@ -162,6 +162,9 @@
                 $this->saveAtributosDoProduto($produto);
             }
 
+            // Salvando produtos relacionados
+            $this->saveProdutosRelacionados();
+
         }
 
         private function saveTags($idProduto, $tags){
@@ -198,6 +201,31 @@
                 if($valor){
                     if(!$stmt->execute(["v"=>$valor, "p"=>$idProduto, "a"=>$i])){
                         throw new Exception($stmt->errorInfo()[2], 1);
+                    }
+                }
+            }
+        }
+
+        private function saveProdutosRelacionados(){
+            
+            // Criando conexão com banco de dados
+            $db = new DB();
+
+            // Criando statement de inserção
+            $stmt = $db->prepare('INSERT INTO relacionados (id_produto1,id_produto2) VALUES (:id1, :id2)');
+
+            // Entrando no loop de produtos
+            foreach ($this->produtos as $produto) {
+
+                // capturando dados do produto
+                $idProduto = $produto[0];
+                $idProdutosRelacionados = array_map(function($id){return 1*trim($id);},explode(",",$produto[3]));
+
+                
+                foreach ($idProdutosRelacionados as $idpr) {
+                    if(!$stmt->execute(["id1"=>$idProduto,"id2"=>$idpr])){
+                        throw new Exception($stmt->errorInfo()[2], 1);
+                        
                     }
                 }
             }

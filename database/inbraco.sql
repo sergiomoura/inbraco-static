@@ -110,22 +110,21 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `inbraco`.`relacionados` ;
 
 CREATE TABLE IF NOT EXISTS `inbraco`.`relacionados` (
-  `id` INT NOT NULL,
   `id_produto1` INT NOT NULL,
   `id_produto2` INT NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id_produto1`,`id_produto2`),
   INDEX `fk_relacionados_produtos1_idx` (`id_produto1` ASC),
   INDEX `fk_relacionados_produtos2_idx` (`id_produto2` ASC),
   CONSTRAINT `fk_relacionados_produtos1`
     FOREIGN KEY (`id_produto1`)
     REFERENCES `inbraco`.`produtos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_relacionados_produtos2`
     FOREIGN KEY (`id_produto2`)
     REFERENCES `inbraco`.`produtos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
