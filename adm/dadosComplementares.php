@@ -1,8 +1,6 @@
-<?php
-
+<?php 
     // Incluindo arquivos necessários
     include(__DIR__."/../lib/DB.php");
-    include(__DIR__."/../lib/ProductsLoader.php");
 
     // Stando flag de controle de erro
     $error = false;
@@ -23,9 +21,8 @@
 
     }
 
-    // Verificando $_POST  $_FILES
+    // Testando $_POST e $_FILES
     if($_POST && $_FILES){
-        
         // Capturando dados do arquivo subido
         $file = $_FILES['file'];
 
@@ -75,18 +72,21 @@
 
         // Caminho para onde foi a pasta
         $path = $file["tmp_name"];
-
-        try {
-            // lendo o arquivo enviado
-            $produtos = new ProducstLoader($path);
-            
-        } catch (\Throwable $e) {
+        
+        if($error) {
+            die($errMsg);
+        }
+        // Abrindo arquivo
+        $zip = new ZipArchive();
+        if($zip->open($path, ZipArchive::RDONLY) !== true){
             $error = true;
-            $errMsg = $e->getMessage();
-            $trace = $e->getTrace();
+            $errMsg = "Falha ao abrir arquivo zip";
+        } else {
+            $errMsg = "Abriu arquivo com sucesso";
         }
 
-        
+        die($errMsg);
+
     }
 
 ?>
@@ -109,27 +109,9 @@
         </nav>
     </header>
     <form method="POST" enctype="multipart/form-data">
-        <p>
-            Selecione o arquivo .csv para popular o banco de dados.
-        </p>
-        <p>
-            No caso de dúvida, <a href="modelo-input.csv">baixe modelo</a>.
-        </p>
-        <input type="hidden" name="MAX_FILE_SIZE" value="<?= str_replace("M","",ini_get("upload_max_filesize"))*1000 ?>" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="<?= str_replace("M","",ini_get("upload_max_filesize"))*100000 ?>" />
         <input type="file" name="file" id="file">
         <button type="submit">Enviar</button>
-        <?= $error ? "<div>$errMsg</div>" : "" ?>
-        <?php
-            if(isset($trace)){
-                echo "<pre>";
-                print_r($trace);
-                echo "</pre>";
-            } else {
-                echo "<pre>";
-                print_r($produtos->getProdutos());
-                echo "</pre>";
-            }
-        ?>
     </form>
 </body>
 </html>
