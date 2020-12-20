@@ -115,7 +115,7 @@
         <p>
             No caso de dúvida, <a href="modelo-input.csv">baixe modelo</a>.
         </p>
-        <input type="hidden" name="MAX_FILE_SIZE" value="<?= str_replace("M","",ini_get("upload_max_filesize"))*1000 ?>" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="<?= str_replace("M","",ini_get("upload_max_filesize"))*1000000 ?>" />
         <input type="file" name="file" id="file">
         <button type="submit">Enviar</button>
         <?= $error ? "<div>$errMsg</div>" : "" ?>
