@@ -1,6 +1,7 @@
 <?php 
     // Incluindo arquivos necessários
     include(__DIR__."/../lib/DB.php");
+    include(__DIR__."/../lib/ZipHandler.php");
 
     // Stando flag de controle de erro
     $error = false;
@@ -76,16 +77,14 @@
         if($error) {
             die($errMsg);
         }
-        // Abrindo arquivo
-        $zip = new ZipArchive();
-        if($zip->open($path, ZipArchive::RDONLY) !== true){
-            $error = true;
-            $errMsg = "Falha ao abrir arquivo zip";
-        } else {
-            $errMsg = "Abriu arquivo com sucesso";
-        }
 
-        die($errMsg);
+        // Tratando o arquivo
+        try {
+            $zh = new ZipHandler($path);
+            $zh->extract();
+        } catch (\Throwable $th) {
+            die($th->getMessage);
+        }
 
     }
 
@@ -109,7 +108,7 @@
         </nav>
     </header>
     <form method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="MAX_FILE_SIZE" value="<?= str_replace("M","",ini_get("upload_max_filesize"))*100000 ?>" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="<?= str_replace("M","",ini_get("upload_max_filesize"))*1000000 ?>" />
         <input type="file" name="file" id="file">
         <button type="submit">Enviar</button>
     </form>
